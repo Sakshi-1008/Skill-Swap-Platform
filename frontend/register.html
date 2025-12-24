@@ -1,78 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Skill Swap Platform - Profile</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Skill Swap Platform - Profile</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Header -->
-<div class="header">
-    <h2>skill swap platform</h2>
-    <div class="nav-buttons">
-        <button class="btn">Swap Request</button>
-        <button class="btn">Home</button>
-        <div class="profile-circle"></div>
+  <!-- Header -->
+  <header>
+    <h2>Skill Swap Platform</h2>
+    <div>
+      <a href="#" class="btn">Swap Request</a>
+      <a href="#" class="btn">Home</a>
+      <div class="avatar"></div>
     </div>
-</div>
+  </header>
 
-<!-- Main Container -->
-<div class="container">
-    <form id="profileForm">
+  <!-- Main Card -->
+  <div class="card" style="width: 700px;">
+    
+    <div style="display:flex; gap:40px;">
+      
+      <!-- Left Form -->
+      <form style="flex:1;">
+        <label>Name:</label>
+        <input type="text" placeholder="Enter name">
 
-        <div class="form-row">
-            <label>Name:</label>
-            <input type="text" placeholder="Enter name">
+        <label>Location:</label>
+        <input type="text" placeholder="Enter location">
+
+        <label>Email Id:</label>
+        <input type="email" placeholder="Enter email">
+
+        <label>Skills Offered:</label>
+        <input type="text" placeholder="e.g. Photoshop">
+
+        <label>Skills Wanted:</label>
+        <input type="text" placeholder="e.g. Excel">
+
+        <label>Availability:</label>
+        <input type="text" placeholder="Weekends / Evenings">
+
+        <label>Profile:</label>
+        <select>
+          <option>Public</option>
+          <option>Private</option>
+        </select>
+
+        <div style="display:flex; gap:10px; margin-top:10px;">
+          <button type="submit">Save</button>
+          <button type="reset" style="background:#9ca3af;">Discard</button>
         </div>
+      </form>
 
-        <div class="form-row">
-            <label>Location:</label>
-            <input type="text" placeholder="Enter location">
-        </div>
+      <!-- Right Profile Image -->
+      <div style="text-align:center;">
+        <div class="avatar large"></div>
+        <br>
+        <select>
+          <option>Upload Photo</option>
+        </select>
+      </div>
 
-        <div class="form-row">
-            <label>Email Id:</label>
-            <input type="email" placeholder="Enter email">
-        </div>
-
-        <div class="form-row">
-            <label>Skills Offered:</label>
-            <input type="text" placeholder="e.g. Photoshop">
-        </div>
-
-        <div class="form-row">
-            <label>Skills Wanted:</label>
-            <input type="text" placeholder="e.g. Excel">
-        </div>
-
-        <div class="form-row">
-            <label>Availability:</label>
-            <input type="text" placeholder="Weekends / Evenings">
-        </div>
-
-        <div class="form-row">
-            <label>Profile:</label>
-            <select>
-                <option>Public</option>
-                <option>Private</option>
-            </select>
-        </div>
-
-        <div class="buttons">
-            <button type="submit" class="btn">Save</button>
-            <button type="reset" class="btn discard">Discard</button>
-        </div>
-
-    </form>
-
-    <!-- Profile Image -->
-    <div class="image-box">
-        <div class="big-circle"></div>
-        <button class="dropdown-btn">DD</button>
     </div>
-</div>
 
-<script src="js/profile.js"></script>
+  </div>
+
 </body>
 </html>
