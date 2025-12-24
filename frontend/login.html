@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Skill Swap Platform - Login</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Skill Swap Platform - Login</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <h1>Skill Swap Platform</h1>
-        <button class="home-btn">Home</button>
-    </header>
+  <!-- Header -->
+  <header>
+    <h2>Skill Swap Platform</h2>
+    <a href="#" class="btn">Home</a>
+  </header>
 
-    <!-- Login Box -->
-    <div class="login-container">
-        <form id="loginForm">
-            <div class="input-group">
-                <label>Email</label>
-                <input type="email" id="email" required>
-            </div>
+  <!-- Login Card -->
+  <div class="card">
+    <form action="../backend/login.php" method="POST">
+      
+      <label>Email</label>
+      <input type="email" name="email" placeholder="Enter email" required>
 
-            <div class="input-group">
-                <label>Password</label>
-                <input type="password" id="password" required>
-            </div>
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Enter password" required>
 
-            <button type="submit" class="login-btn">Login</button>
+      <button type="submit">Login</button>
 
-            <div class="links">
-                <a href="#">Create an account</a>
-                <a href="#">Forgot password</a>
-            </div>
-        </form>
-    </div>
+      <p style="text-align:center; margin-top:10px;">
+        <a href="#">Create an account</a><br><br>
+        <a href="#">Forgot password</a>
+      </p>
 
-    <script src="js/script.js"></script>
+    </form>
+  </div>
+
 </body>
 </html>
