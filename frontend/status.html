@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swap Requests</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h2>skill swap platform</h2>
+
+    <div style="display:flex; align-items:center; gap:15px;">
+        <a href="home.html" class="btn">HOME</a>
+        <span class="avatar"></span>
+    </div>
+</header>
+
+<!-- Filter Section -->
+<div class="search-bar" style="display:flex; gap:15px; padding:15px;">
+    <button style="background:#d1d5db; color:black;">Pending</button>
+    <input type="text" placeholder="Search">
+</div>
+
+<!-- Request Card - Pending -->
+<div class="user-card">
+    <span class="avatar large"></span>
+
+    <div style="flex:1;">
+        <h3>Sakshi Patel</h3>
+
+        <p><strong>Skills Offered</strong></p>
+        <div style="display:flex; gap:10px;">
+            <span class="skill-box"></span>
+            <span class="skill-box"></span>
+        </div>
+
+        <p><strong>Skills Wanted</strong></p>
+        <div style="display:flex; gap:10px;">
+            <span class="skill-box"></span>
+            <span class="skill-box"></span>
+        </div>
+    </div>
+
+    <div style="text-align:right;">
+        <p><strong>Status:</strong> pending</p>
+        <button class="accept">Accept</button>
+        <button class="reject">Reject</button>
+    </div>
+</div>
+
+<!-- Request Card - Rejected -->
+<div class="user-card">
+    <span class="avatar large"></span>
+
+    <div style="flex:1;">
+        <h3>Khushi Patel</h3>
+
+        <p><strong>Skills Offered</strong></p>
+        <div style="display:flex; gap:10px;">
+            <span class="skill-box"></span>
+            <span class="skill-box"></span>
+        </div>
+
+        <p><strong>Skills Wanted</strong></p>
+        <div style="display:flex; gap:10px;">
+            <span class="skill-box"></span>
+            <span class="skill-box"></span>
+        </div>
+    </div>
+
+    <div style="text-align:right;">
+        <p><strong>Status:</strong> Rejected</p>
+    </div>
+</div>
+
+</body>
+</html>
