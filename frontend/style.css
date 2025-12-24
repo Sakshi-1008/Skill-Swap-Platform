@@ -1,0 +1,66 @@
+body {
+  font-family: Arial;
+  background: #fbe3e3;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  width: 300px;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+
+input, select, textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px;
+}
+
+button {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.user-card, .request-card {
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: #7c3aed;
+  border-radius: 50%;
+}
+
+.large {
+  width: 80px;
+  height: 80px;
+}
+
+.btn {
+  background: #2563eb;
+  color: white;
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.accept { background: green; }
+.reject { background: red; }
