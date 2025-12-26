@@ -1,4 +1,6 @@
-/* ===== Global Reset ===== */
+/* ===================================
+   RESET & BASE STYLES
+   =================================== */
 * {
   margin: 0;
   padding: 0;
@@ -6,100 +8,79 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #fbe3e3;
-  color: #000;
-  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
-/* ===== Layout Containers ===== */
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px 0;
+html {
+  scroll-behavior: smooth;
 }
 
-/* ===== Header ===== */
+/* ===================================
+   HEADER
+   =================================== */
 header {
+  background: linear-gradient(135deg, #5b7fff 0%, #6366f1 100%);
+  color: white;
+  padding: 18px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 30px;
+  box-shadow: 0 4px 12px rgba(91, 127, 255, 0.2);
   position: sticky;
   top: 0;
-  background: white;
-  border-bottom: 1px solid #ddd;
-  z-index: 20;
+  z-index: 1000;
 }
 
-header h1 {
-  font-size: 22px;
-  font-weight: 600;
-}
-
-header .btn {
-  padding: 6px 14px;
-}
-
-/* ===== Buttons ===== */
-button, .btn {
-  background: #2563eb;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 16px;
-  transition: 0.2s;
-}
-
-button:hover, .btn:hover {
-  opacity: 0.85;
-}
-
-.accept { background: #14883e; }
-.reject { background: #d13535; }
-
-/* ===== Cards ===== */
-.card,
-.user-card,
-.request-card {
-  background: #fff;
-  margin: 18px auto;
-  padding: 20px 25px;
-  width: 90%;
-  max-width: 850px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-}
-
-/* centered card (login & form) */
-.card {
-  flex-direction: column;
-  max-width: 420px;
-  padding: 30px;
-}
-
-/* card titles */
-.card h2,
-.user-card h2 {
-  margin-bottom: 12px;
+header h2,
+header h3 {
+  margin: 0;
   font-size: 20px;
   font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
-/* ===== Avatar ===== */
+header a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header a:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ===================================
+   AVATAR
+   =================================== */
 .avatar {
   width: 50px;
   height: 50px;
-  background: #7c3aed;
   border-radius: 50%;
+  background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(139, 92, 246, 0.3);
+  border: 3px solid white;
+  flex-shrink: 0;
 }
 
 .avatar.large {
@@ -107,116 +88,497 @@ button:hover, .btn:hover {
   height: 90px;
 }
 
-/* ===== Inputs ===== */
-input, select, textarea {
+/* ===================================
+   SEARCH BAR
+   =================================== */
+.search-bar {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 0 24px;
+}
+
+.search-bar input {
   width: 100%;
-  padding: 12px 14px;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 14px 20px;
+  border: 2px solid #e0e7ff;
+  border-radius: 10px;
   font-size: 15px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #5b7fff;
+  box-shadow: 0 4px 12px rgba(91, 127, 255, 0.15);
+}
+
+.search-bar input::placeholder {
+  color: #9ca3af;
+}
+
+/* ===================================
+   USER CARD
+   =================================== */
+.user-card {
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 28px 32px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  transition: all 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.user-card h3,
+.user-card h4 {
+  margin: 0 0 8px 0;
+  color: #111827;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.user-card p {
+  margin: 6px 0;
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.user-card > div {
+  flex: 1;
+}
+
+/* ===================================
+   CARD (GENERIC)
+   =================================== */
+.card {
+  max-width: 700px;
+  margin: 32px auto;
+  padding: 36px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  margin: 0 0 20px 0;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ===================================
+   FORM ELEMENTS
+   =================================== */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  margin: 18px 0 8px 0;
+  color: #374151;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  background: white;
+  transition: all 0.3s ease;
+  color: #1f2937;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #5b7fff;
+  box-shadow: 0 0 0 3px rgba(91, 127, 255, 0.1);
 }
 
 textarea {
-  resize: none;
+  resize: vertical;
   min-height: 100px;
+  line-height: 1.6;
 }
 
-/* ===== Tabs ===== */
-.nav-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin: 18px 0;
-}
-
-/* ===== Table (requests / availability) ===== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-table th {
-  background: #2563eb;
-  color: #fff;
-  font-weight: 500;
-  padding: 12px;
-}
-
-table td {
-  padding: 12px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* ===== Status Badges ===== */
-.status {
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: capitalize;
-}
-
-.status.pending { background: #e4a11b; color: white; }
-.status.accepted { background: #14883e; color: white; }
-.status.rejected { background: #d13535; color: white; }
-
-/* ===== Rating Stars ===== */
-.rating {
-  display: flex;
-  gap: 4px;
-  font-size: 20px;
-  color: gold;
-}
-
-/* ===== Center Helper ===== */
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 85vh;
-}
-
-/* ===== Pagination ===== */
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 18px;
-}
-
-.pagination span {
-  padding: 6px 10px;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+select {
   cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23374151' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
 }
 
-.pagination span:hover {
-  background: #2563eb;
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* ===================================
+   BUTTONS
+   =================================== */
+button,
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #5b7fff 0%, #6366f1 100%);
   color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(91, 127, 255, 0.3);
 }
 
-/* ===== Responsive for Mobile ===== */
-@media (max-width: 600px) {
-  .card, .user-card, .request-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+button:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(91, 127, 255, 0.4);
+  background: linear-gradient(135deg, #4c6eef 0%, #5558e3 100%);
+}
 
-  button, .btn {
-    width: 100%;
+button:active,
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Button Variants */
+button[type="reset"] {
+  background: #9ca3af;
+  box-shadow: 0 2px 8px rgba(156, 163, 175, 0.3);
+}
+
+button[type="reset"]:hover {
+  background: #6b7280;
+  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.4);
+}
+
+button.accept {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  padding: 10px 24px;
+  margin: 6px 4px;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+button.accept:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+button.reject {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  padding: 10px 24px;
+  margin: 6px 4px;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+button.reject:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+/* ===================================
+   SKILL BOX
+   =================================== */
+.skill-box {
+  display: inline-block;
+  width: 110px;
+  height: 38px;
+  background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%);
+  border-radius: 8px;
+  border: 2px solid #a78bfa;
+  margin: 6px 4px;
+  box-shadow: 0 2px 4px rgba(167, 139, 250, 0.2);
+}
+
+/* ===================================
+   LINKS
+   =================================== */
+a {
+  color: #5b7fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #4c6eef;
+}
+
+/* ===================================
+   LAYOUT HELPERS
+   =================================== */
+
+/* Form button group */
+form > div {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+form > div button {
+  flex: 1;
+}
+
+/* Login form specific */
+.card form button[type="submit"] {
+  margin-top: 28px;
+  width: 100%;
+}
+
+.card form p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.card form p a {
+  display: inline-block;
+  margin: 2px 0;
+}
+
+/* Profile edit layout - two column */
+.card > div {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.card > div > form {
+  flex: 1;
+}
+
+.card > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  min-width: 160px;
+}
+
+/* Request status section */
+.user-card > div:last-child {
+  text-align: right;
+  min-width: 200px;
+}
+
+.user-card > div:last-child p {
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.user-card > div:last-child p strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+/* Skills display in user card */
+.user-card > div p + div {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+/* ===================================
+   FILTER SECTION (for requests page)
+   =================================== */
+.search-bar button {
+  padding: 10px 24px;
+  background: #d1d5db;
+  color: #1f2937;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  font-size: 14px;
+}
+
+.search-bar button:hover {
+  background: #9ca3af;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+@media (max-width: 768px) {
+  header {
+    padding: 16px 20px;
+    flex-direction: column;
+    gap: 14px;
     text-align: center;
   }
 
-  header {
+  header h2,
+  header h3 {
+    font-size: 18px;
+  }
+
+  header div {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .search-bar {
+    margin: 24px auto;
+    padding: 0 20px;
+  }
+
+  .user-card {
     flex-direction: column;
-    gap: 12px;
+    align-items: flex-start;
+    padding: 24px;
+    margin: 20px;
+  }
+
+  .user-card > div:last-child {
+    text-align: left;
+    width: 100%;
+    min-width: auto;
+  }
+
+  .user-card > div:last-child button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .card {
+    padding: 28px;
+    margin: 24px 20px;
+  }
+
+  .card > div {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .card > div > div {
+    width: 100%;
+  }
+
+  button,
+  .btn {
+    width: 100%;
+    margin: 6px 0;
+  }
+
+  form > div {
+    flex-direction: column;
+  }
+
+  form > div button {
+    width: 100%;
+  }
+
+  .user-card > div p + div {
+    flex-direction: column;
+  }
+
+  .skill-box {
+    width: 100%;
+  }
+
+  .avatar {
+    width: 45px;
+    height: 45px;
+  }
+
+  .avatar.large {
+    width: 80px;
+    height: 80px;
   }
   
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 14px 16px;
+  }
+
+  header h2,
+  header h3 {
+    font-size: 16px;
+  }
+
+  .card {
+    margin: 20px 16px;
+    padding: 24px;
+  }
+
+  .user-card {
+    margin: 16px;
+    padding: 20px;
+  }
+
+  .search-bar {
+    padding: 0 16px;
+    margin: 20px auto;
+  }
+
+  button,
+  .btn {
+    padding: 11px 22px;
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    font-size: 14px;
+  }
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ===================================
+   SELECTION
+   =================================== */
+::selection {
+  background: #5b7fff;
+  color: white;
 }
