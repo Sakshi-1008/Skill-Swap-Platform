@@ -1,77 +1,4 @@
-/* body {
-  font-family: Arial;
-  background: #fbe3e3;
-}
-
-.card {
-  background: #fff;
-  padding: 20px;
-  width: 300px;
-  margin: 50px auto;
-  border-radius: 10px;
-}
-
-input, select, textarea {
-  width: 100%;
-  margin: 8px 0;
-  padding: 8px;
-}
-
-button {
-  width: 100%;
-  background: #2563eb;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-}
-
-.user-card, .request-card {
-  background: white;
-  margin: 15px;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  border-radius: 10px;
-}
-
-.avatar {
-  width: 40px;
-  height: 40px;
-  background: #7c3aed;
-  border-radius: 50%;
-}
-
-.large {
-  width: 80px;
-  height: 80px;
-}
-
-.btn {
-  background: #2563eb;
-  color: white;
-  padding: 6px 12px;
-  text-decoration: none;
-  border-radius: 6px;
-}
-
-.accept { background: green; }
-.reject { background: red; }
-.skill-box {
-  width: 70px;
-  height: 22px;
-  background: #2563eb;
-  border-radius: 6px;
-} */
-
-/* ===== Global ===== */
+/* ===== Global Reset ===== */
 * {
   margin: 0;
   padding: 0;
@@ -80,8 +7,17 @@ header {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #fbe3e3;    /* Pink background same as Figma */
+  background: #fbe3e3;
   color: #000;
+  line-height: 1.5;
+}
+
+/* ===== Layout Containers ===== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
 /* ===== Header ===== */
@@ -89,151 +25,197 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 25px;
+  padding: 18px 30px;
+  position: sticky;
+  top: 0;
   background: white;
   border-bottom: 1px solid #ddd;
+  z-index: 20;
 }
 
 header h1 {
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+header .btn {
+  padding: 6px 14px;
 }
 
 /* ===== Buttons ===== */
 button, .btn {
-  background: #2563eb;    /* Blue primary button */
+  background: #2563eb;
   color: white;
   border: none;
-  padding: 8px 14px;
+  padding: 10px 16px;
   border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 16px;
+  transition: 0.2s;
 }
 
 button:hover, .btn:hover {
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
-.accept {
-  background: green;
-}
+.accept { background: #14883e; }
+.reject { background: #d13535; }
 
-.reject {
-  background: red;
-}
-
-/* ===== User + Request Cards ===== */
+/* ===== Cards ===== */
 .card,
 .user-card,
 .request-card {
-  background: white;
-  margin: 15px auto;
-  padding: 15px;
+  background: #fff;
+  margin: 18px auto;
+  padding: 20px 25px;
   width: 90%;
   max-width: 850px;
   display: flex;
   align-items: center;
-  gap: 15px;
+  justify-content: space-between;
+  gap: 18px;
   border-radius: 10px;
   border: 1px solid #ddd;
 }
 
-.card {                   /* screens like login or message form */
+/* centered card (login & form) */
+.card {
   flex-direction: column;
-  max-width: 350px;
-  padding: 25px;
+  max-width: 420px;
+  padding: 30px;
 }
 
-.card h2 {
-  margin-bottom: 15px;
+/* card titles */
+.card h2,
+.user-card h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 /* ===== Avatar ===== */
 .avatar {
-  width: 45px;
-  height: 45px;
-  background: #7c3aed;    /* Purple circle */
+  width: 50px;
+  height: 50px;
+  background: #7c3aed;
   border-radius: 50%;
 }
 
 .avatar.large {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
 }
 
 /* ===== Inputs ===== */
 input, select, textarea {
   width: 100%;
-  padding: 10px;
-  margin-top: 8px;
-  margin-bottom: 12px;
+  padding: 12px 14px;
+  margin-top: 10px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 6px;
+  font-size: 15px;
 }
 
 textarea {
   resize: none;
-  height: 100px;
+  min-height: 100px;
 }
 
-/* ===== Table Style (Availability / Requests screen) ===== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-table td {
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* ===== Navigation Tabs ===== */
+/* ===== Tabs ===== */
 .nav-tabs {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin: 10px 0;
+  gap: 14px;
+  margin: 18px 0;
 }
 
-.nav-tabs button {
-  padding: 6px 10px;
+/* ===== Table (requests / availability) ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-/* ===== Pagination ===== */
-.pagination {
-  text-align: center;
-  margin-top: 10px;
+table th {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 500;
+  padding: 12px;
 }
 
-.pagination span {
-  margin: 0 5px;
-  cursor: pointer;
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
 }
 
-/* ===== Centered Container (login & form pages) ===== */
+/* ===== Status Badges ===== */
+.status {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status.pending { background: #e4a11b; color: white; }
+.status.accepted { background: #14883e; color: white; }
+.status.rejected { background: #d13535; color: white; }
+
+/* ===== Rating Stars ===== */
+.rating {
+  display: flex;
+  gap: 4px;
+  font-size: 20px;
+  color: gold;
+}
+
+/* ===== Center Helper ===== */
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 88vh;
+  min-height: 85vh;
 }
 
-/* ===== Status Labels ===== */
-.status {
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 13px;
-}
-
-.status.pending { background: orange; color: white; }
-.status.accepted { background: green; color: white; }
-.status.rejected { background: red; color: white; }
-
-/* ===== Rating star layout ===== */
-.rating {
+/* ===== Pagination ===== */
+.pagination {
   display: flex;
-  gap: 3px;
-  font-size: 18px;
-  color: gold;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 18px;
+}
+
+.pagination span {
+  padding: 6px 10px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination span:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* ===== Responsive for Mobile ===== */
+@media (max-width: 600px) {
+  .card, .user-card, .request-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button, .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
