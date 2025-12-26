@@ -83,10 +83,6 @@ header div {
   flex-shrink: 0;
 }
 
-.avatar.large {
-  width: 90px;
-  height: 90px;
-}
 
 /* ===================================
    SEARCH BAR
@@ -281,27 +277,27 @@ button[type="reset"]:hover {
 }
 
 button.accept {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+ background: linear-gradient(135deg, #5b7fff 0%, #6366f1 100%);
   padding: 10px 24px;
   margin: 6px 4px;
-  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 2px 8px rgba(91, 127, 255, 0.3);
+
 }
 
 button.accept:hover {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
-}
+  box-shadow: 0 4px 12px rgba(91, 127, 255, 0.4);
+  background: linear-gradient(135deg, #4c6eef 0%, #5558e3 100%);
 
 button.reject {
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  background: linear-gradient(135deg, #5b7fff 0%, #6366f1 100%);
   padding: 10px 24px;
   margin: 6px 4px;
-  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+  box-shadow: 0 2px 8px rgba(91, 127, 255, 0.3);
 }
 
 button.reject:hover {
-  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+  box-shadow: 0 4px 12px rgba(91, 127, 255, 0.4);
+  background: linear-gradient(135deg, #4c6eef 0%, #5558e3 100%);
 }
 
 /* ===================================
