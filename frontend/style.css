@@ -80,18 +80,8 @@ header div {
   display: inline-block;
   box-shadow: 0 4px 8px rgba(139, 92, 246, 0.3);
   border: 3px solid white;
-  flex-shrink: 0;
+  
 }
-<<<<<<< HEAD
-.profile-avatar {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-}
-=======
-
-
->>>>>>> 69f36a49f3942da119cf7b8341c0a9032c4f6a28
 /* ===================================
    SEARCH BAR
    =================================== */
@@ -275,13 +265,17 @@ button:active,
 
 /* Button Variants */
 button[type="reset"] {
-  background: #9ca3af;
-  box-shadow: 0 2px 8px rgba(156, 163, 175, 0.3);
+  background: #5b7fff;
+  box-shadow: 0 2px 8px rgba(91, 127, 255, 0.3);
 }
 
 button[type="reset"]:hover {
-  background: #6b7280;
-  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.4);
+  background: #5b7fff;
+  box-shadow: 0 4px 12px rgba(91, 127, 255, 0.3);
+}
+button.reset:hover {
+  box-shadow: 0 4px 12px rgba(91, 127, 255, 0.4);
+  background: linear-gradient(135deg, #4c6eef 0%, #5558e3 100%);
 }
 
 button.accept {
