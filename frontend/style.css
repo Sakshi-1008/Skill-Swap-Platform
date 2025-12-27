@@ -140,13 +140,19 @@ header div {
   font-size: 20px;
   font-weight: 600;
 }
+.user-card h3{
+   font-size: 20px;
+   margin: 0;
+   max-width: 200px;
+}
 
-/*.user-card p {
-  margin: 6px 0;
-  color: #6b7280;
+.user-card p {
+  margin: 0;
   font-size: 15px;
-  line-height: 1.5;
-}*/
+  color: #6b7280;
+  line-height: 1.2;
+  max-width: 300px;
+}
 
 .user-card > div {
   flex: 1;
@@ -249,6 +255,15 @@ button,
   text-decoration: none;
   text-align: center;
   box-shadow: 0 2px 8px rgba(91, 127, 255, 0.3);
+}
+.user-card .btn {
+  margin-left: auto;
+  background: #6674f4;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 button:hover,
