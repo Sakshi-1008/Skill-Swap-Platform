@@ -66,7 +66,7 @@ header a:hover {
 header div {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
 }
 
 /* ===================================
@@ -141,12 +141,12 @@ header div {
   font-weight: 600;
 }
 
-.user-card p {
+/*.user-card p {
   margin: 6px 0;
   color: #6b7280;
   font-size: 15px;
   line-height: 1.5;
-}
+}*/
 
 .user-card > div {
   flex: 1;
@@ -289,6 +289,7 @@ button.accept {
 button.accept:hover {
   box-shadow: 0 4px 12px rgba(91, 127, 255, 0.4);
   background: linear-gradient(135deg, #4c6eef 0%, #5558e3 100%);
+}
 
 button.reject {
   background: linear-gradient(135deg, #5b7fff 0%, #6366f1 100%);
@@ -301,8 +302,17 @@ button.reject:hover {
   box-shadow: 0 4px 12px rgba(91, 127, 255, 0.4);
   background: linear-gradient(135deg, #4c6eef 0%, #5558e3 100%);
 }
+button.Pending {
+ background: linear-gradient(135deg, #5b7fff 0%, #6366f1 100%);
+  padding: 10px 24px;
+  margin: 6px 4px;
+  box-shadow: 0 2px 8px rgba(91, 127, 255, 0.3);
 }
 
+button.Pending:hover {
+  box-shadow: 0 4px 12px rgba(91, 127, 255, 0.4);
+  background: linear-gradient(135deg, #4c6eef 0%, #5558e3 100%);
+}
 /* ===================================
    SKILL BOX
    =================================== */
