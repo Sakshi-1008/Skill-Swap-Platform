@@ -82,6 +82,9 @@ header div {
   border: 3px solid white;
   
 }
+.user-card .avatar {
+  margin-right: 14px;   /* reduce this value (try 10–14px) */
+}
 /* ===================================
    SEARCH BAR
    =================================== */
@@ -118,7 +121,7 @@ header div {
 .user-card {
   max-width: 800px;
   margin: 24px auto;
-  padding: 28px 32px;
+  padding: 20px 28px;
   background: white;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -126,6 +129,7 @@ header div {
   align-items: center;
   gap: 24px;
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .user-card:hover {
@@ -133,7 +137,7 @@ header div {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-.user-card h3,
+
 .user-card h4 {
   margin: 0 0 8px 0;
   color: #111827;
@@ -142,16 +146,18 @@ header div {
 }
 .user-card h3{
    font-size: 20px;
-   margin: 0;
-   max-width: 200px;
+   margin: 10px 0;
+   max-width: 150px;
+   text-align: left;  
 }
 
 .user-card p {
-  margin: 0;
+  margin: 10px 0;
   font-size: 15px;
+  text-align: left;
   color: #6b7280;
   line-height: 1.2;
-  max-width: 300px;
+  max-width: 270px;
 }
 
 .user-card > div {
@@ -257,13 +263,13 @@ button,
   box-shadow: 0 2px 8px rgba(91, 127, 255, 0.3);
 }
 .user-card .btn {
-  margin-left: auto;
-  background: #6674f4;
-  color: #fff;
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
   padding: 12px 28px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 500;
+  white-space: nowrap;
 }
 
 button:hover,
@@ -317,17 +323,7 @@ button.reject:hover {
   box-shadow: 0 4px 12px rgba(91, 127, 255, 0.4);
   background: linear-gradient(135deg, #4c6eef 0%, #5558e3 100%);
 }
-button.Pending {
- background: linear-gradient(135deg, #5b7fff 0%, #6366f1 100%);
-  padding: 10px 24px;
-  margin: 6px 4px;
-  box-shadow: 0 2px 8px rgba(91, 127, 255, 0.3);
-}
 
-button.Pending:hover {
-  box-shadow: 0 4px 12px rgba(91, 127, 255, 0.4);
-  background: linear-gradient(135deg, #4c6eef 0%, #5558e3 100%);
-}
 /* ===================================
    SKILL BOX
    =================================== */
