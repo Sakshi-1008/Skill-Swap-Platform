@@ -537,11 +537,11 @@ form > div button {
     height: 45px;
   }
 
-  /* .avatar.large {
+  .avatar.large {
     width: 80px;
     height: 80px;
   }
-   */
+  
 }
 
 @media (max-width: 480px) {
