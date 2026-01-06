@@ -33,5 +33,37 @@
   <a href="request.html" class="btn">Request</a>
 </div>
 
+<script>
+if(!localStorage.getItem("token")){
+  window.location.href = "login.html";
+}
+
+fetch("http://localhost:5000/api/users", {
+  headers:{
+    "Authorization":"Bearer " + localStorage.getItem("token")
+  }
+})
+.then(res => res.json())
+.then(users => {
+  const box = document.getElementById("users");
+  box.innerHTML = "";
+
+  users.forEach(u => {
+    box.innerHTML += `
+      <div class="user-card">
+        <h3>${u.name}</h3>
+        <p>Skill: ${u.skill}</p>
+        <button onclick="goSwap('${u._id}')">Request Swap</button>
+      </div>
+    `;
+  });
+});
+
+function goSwap(id){
+  localStorage.setItem("swapUser", id);
+  window.location.href = "swaprequest.html";
+}
+</script>
+
 </body>
 </html>
